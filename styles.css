@@ -159,12 +159,17 @@ body {
   box-shadow: 0 0 .5em rgba(3, 15, 252, 0.8);
 }
 
+#cardPile div:hover{
+  cursor: pointer;
+}
+
 
 /* Mensagem */
 #mensagemSucesso {
 
   position: absolute;
   margin: 0 auto;
+  left: 425px;
   top: 250px;
   z-index: 100;
 

@@ -8,7 +8,7 @@ function init() {
   $('#mensagemSucesso').hide();
   $('#mensagemSucesso').css({
     top: '250px',
-    left: '340px'
+    left: '425px'
   });
 
 
