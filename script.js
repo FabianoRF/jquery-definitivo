@@ -37,7 +37,15 @@ function init() {
   }
 
   // Cria os slots para as cartas
-  let questoes = ['Quem eh o bruxao??', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  let questoes = ['Primeiro Programador', 
+                  'Pai da computação',
+                   'Criador da linguagem C, cocriador do Unix', 
+                   'Pai do open source', 
+                   'Solucionou o problema do caminho mais curto num grafo', 
+                   'Pai do Java', 
+                   'Criador do Git e do Linux',
+                    'Criou o primeiro pc', 
+                    'Criador do WWW'];
 
   for (let i = 1; i <= 9; i++) {
     $('<div>' + questoes[i - 1] + '</div>')
