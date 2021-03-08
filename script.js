@@ -7,10 +7,8 @@ function init() {
   // Esconde a mensagem de sucesso
   $('#mensagemSucesso').hide();
   $('#mensagemSucesso').css({
-    left: '580px',
     top: '250px',
-    width: 0,
-    height: 0
+    left: '340px'
   });
 
 
