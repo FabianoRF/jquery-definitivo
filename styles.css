@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+7@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 /* Add some margin to the page and set a default font and colour */
 *{
@@ -11,11 +11,52 @@
 body {
   background-color:#d7d7d9;
 }
-/* 
+
 #card1 {
-  background: url('assets/bruxo.jpeg')!important;
+  background: url('assets/adalovelace.jpg')!important;
   background-size: cover!important;
-} */
+} 
+
+#card2 {
+  background: url('assets/alan_turing.jpg')!important;
+  background-size: cover!important;
+}
+
+#card3 {
+  background: url('assets/dennis_ritchie.jpg')!important;
+  background-size: cover!important;
+}
+
+#card4 {
+  background: url('assets/richard_stallman.jpg')!important;
+  background-size: cover!important;
+}
+
+#card5 {
+  background: url('assets/edsger_dijkstra.jpg')!important;
+  background-size: cover!important;
+}
+
+#card6 {
+  background: url('assets/james_gosling.jpg')!important;
+  background-size: cover!important;
+}
+
+#card7 {
+  background: url('assets/linus_torvalds.jpg')!important;
+  background-size: cover!important;
+}
+
+#card8 {
+  background: url('assets/steve_wozniak.jpg')!important;
+  background-size: cover!important;
+}
+
+#card9 {
+  background: url('assets/tim_berners_lee.jpg')!important;
+  background-size: cover!important;
+}
+
 
 /* Give headings their own font */
 
