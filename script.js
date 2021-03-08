@@ -24,7 +24,7 @@ function init() {
   numbers.sort(() => { return Math.random() - .5 });
 
   for (let i = 0; i < 9; i++) {
-    $('<div>' + numbers[i] + '</div>')
+    $('<div>' + '</div>')
       .data('number', numbers[i])
       .attr('id', 'card' + numbers[i])
       .appendTo('#cardPile')
@@ -37,15 +37,15 @@ function init() {
   }
 
   // Cria os slots para as cartas
-  let questoes = ['Primeiro Programador', 
-                  'Pai da computação',
-                   'Criador da linguagem C, cocriador do Unix', 
-                   'Pai do open source', 
-                   'Solucionou o problema do caminho mais curto num grafo', 
-                   'Pai do Java', 
-                   'Criador do Git e do Linux',
-                    'Criou o primeiro pc', 
-                    'Criador do WWW'];
+  let questoes = ['Primeiro Programador',
+    'Pai da computação',
+    'Criador da linguagem C, cocriador do Unix',
+    'Pai do open source',
+    'Solucionou o problema do caminho mais curto num grafo',
+    'Pai do Java',
+    'Criador do Git e do Linux',
+    'Criou o primeiro pc',
+    'Criador do WWW'];
 
   for (let i = 1; i <= 9; i++) {
     $('<div>' + questoes[i - 1] + '</div>')
@@ -90,10 +90,8 @@ function lidaComODropDoCard(event, ui) {
     $('#mensagemSucesso').show();
 
     $('#mensagemSucesso').animate({
-      left: '380px',
-      top: '200px',
-      width: '400px',
-      height: '100px',
+      width: '600px',
+      height: '200px',
       opacity: 1
     });
   }

@@ -1,6 +1,5 @@
-7@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/* Add some margin to the page and set a default font and colour */
 *{
   padding: 0;
   border: 0;
@@ -9,7 +8,7 @@
 }
 
 body {
-  background-color:#d7d7d9;
+  background-color: #0D0D0D;
 }
 
 #card1 {
@@ -57,26 +56,22 @@ body {
   background-size: cover!important;
 }
 
-
-/* Give headings their own font */
-
-h1, h2, h3, h4 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-
 /* Main content area */
 
 #title{
-  background-color: #F2EDE4;
+  background-color: #0D0D0D;
   width: 100%;
-  height: 300px;
+  height: 200px;
+  border-bottom: 2px solid #0311FC;
 }
 
 #title h1{
-  padding-top: 100px;
+  padding-top: 80px;
   text-align: center;
   font-size: 3.2rem;
-  font-family: 'Parisienne', cursive;
+  font-family: 'Montserrat', sans-serif;
+  color: #D9D9D9;
+  text-shadow: 0px 2px 10px #0311FC;
 }
 
 #content {
@@ -108,17 +103,17 @@ h1, h2, h3, h4 {
   font-size: 1.5em;
 }
 
-/* Slots for final card positions */
+/* SLots antes de começar a seprar cartas */
 
 #cardSlots {
-  background:#bf7b3f;
+  background:rgb(67, 67, 67);
 }
 
-/* The initial pile of unsorted cards */
+/* Pilha inicial */
 
 #cardPile {
   margin: 0 auto;
-  background:#5d8aa6;
+  background: rgb(67, 67, 67);
 }
 
 #cardSlots, #cardPile {
@@ -127,77 +122,76 @@ h1, h2, h3, h4 {
   justify-content: center;
   width: 550px;
   height: 600px;
-  
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.09);
+  border-radius: 2%;
+  box-shadow: 0px 0px 5px #0311FC;
 }
 
-/* Individual cards and slots */
+/* Individual cards e slots */
 
 #cardSlots div, #cardPile div {
   width: 150px;
   height: 150px;
-  border: 2px solid #333;
+  border: 2px solid #01087C;
   border-radius: 10px;
   margin:10px;
-  background: #fff;
-}
-
-
-#cardSlots div.hovered {
-  background: #aaa;
+  background: rgba(3, 15, 252, 0.3);
 }
 
 #cardSlots div{
   margin-top: 30px;
   margin-left: 16px;
-  color: aqua;
-  text-align: left;
+  color: rgb(0, 0, 0);
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #D9D9D9;
+  font-size: 0.9rem;
 }
 
 #cardPile div {
   margin-top: 30px;
   margin-left: 16px;
-  background: #666;
-  color: #fff;
-  font-size: 50px;
-  text-shadow: 0 0 3px #000;
 }
 
 #cardPile div.ui-draggable-dragging {
-  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 .5em rgba(3, 15, 252, 0.8);
+  -webkit-box-shadow: 0 0 .5em rgba(3, 15, 252, 0.8);
+  box-shadow: 0 0 .5em rgba(3, 15, 252, 0.8);
 }
 
-/* Individually coloured cards */
 
-#card1.correct { background: red; }
-#card2.correct { background: brown; }
-#card3.correct { background: orange; }
-#card4.correct { background: yellow; }
-#card5.correct { background: green; }
-#card6.correct { background: cyan; }
-#card7.correct { background: blue; }
-#card8.correct { background: indigo; }
-#card9.correct { background: purple; }
-#card10.correct { background: violet; }
-
-
-/* "You did it!" message */
+/* Mensagem */
 #mensagemSucesso {
-  position: absolute;
-  left: 580px;
-  top: 250px;
-  width: 0;
-  height: 0;
-  z-index: 100;
-  background: #dfd;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D9D9D9;
+  border-radius: 2%;
+  box-shadow: 0px 0px 5px #0311FC;
+  margin-left: 425px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  white-space: nowrap;
+  
+}
+
+#mensagemSucesso h2{
+  padding-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+}
+
+#mensagemSucesso button{
+  margin-top: 40px;
+  width: 200px;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: #D9D9D9;
+  background-color: #0311FC;
+  border-radius: 2%;
+  box-shadow: 0px 0px 5px #000000;
+}
+
+#mensagemSucesso button:hover{
+  cursor: pointer;
 }
