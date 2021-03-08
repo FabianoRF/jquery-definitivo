@@ -1,7 +1,6 @@
 let questoesCorretas = 0;
 $(init);
 
-
 // Inicia
 function init() {
   // Esconde a mensagem de sucesso
@@ -11,11 +10,10 @@ function init() {
     left: '425px'
   });
 
-
   // Inicia o game
   questoesCorretas = 0;
-  $('#cardPile').html('');
-  $('#cardSlots').html('');
+  $('#cardPile').html(''); //Pilha onde ficaram os cards incialmente
+  $('#cardSlots').html(''); //Pilha onde os cards ficaram após serem colocados na posição correta
 
   // Cria a primeira pilha de cartas
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -34,7 +32,7 @@ function init() {
       });
   }
 
-  // Cria os slots para as cartas
+  // Cria os slots para as cartas (as perguntas)
   let questoes = ['Primeiro Programador',
     'Pai da computação',
     'Criador da linguagem C, cocriador do Unix',
@@ -55,7 +53,6 @@ function init() {
         drop: lidaComODropDoCard
       });
   }
-
 }
 
 function lidaComODropDoCard(event, ui) {
@@ -66,7 +63,6 @@ function lidaComODropDoCard(event, ui) {
 
   //Se os cards forem dropados no slot correto
   //Mude alguma cor ou algo do tipo
-  //on top of the slot and prevent it being dragged again
 
   if (numeroDoSlot === numeroDaQuestão) {
     ui.draggable.addClass('correct');
@@ -76,14 +72,13 @@ function lidaComODropDoCard(event, ui) {
       of: $(this), my: 'left top', at: 'left top'
     });
 
-    //Previne que o card saia para fora
-    //coloca o card na posição inicial
+    //Evita que o card saia para fora
 
     ui.draggable.draggable('option', 'revert', false);
     questoesCorretas++; //incrementa uma questão correta
   }
 
-  // Se todas questoes estiverem corretas exibir a mensagem de sucesso
+  // Se todas questoes estiverem corretas (contador = 9) exibir a mensagem de sucesso
   if (questoesCorretas === 9) {
     $('#mensagemSucesso').show();
 

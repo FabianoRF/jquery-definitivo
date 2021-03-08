@@ -85,7 +85,7 @@ body {
   user-select: none;
 }
 
-/* Header/footer boxes */
+/* Header / footer / boxes */
 
 .wideBox {
   clear: both;
@@ -103,20 +103,20 @@ body {
   font-size: 1.5em;
 }
 
-/* SLots antes de começar a seprar cartas */
+/* Slots antes de começar a seprar cartas */
 
-#cardSlots {
+#cardSlots { /*Toda a div*/
   background:rgb(67, 67, 67);
 }
 
 /* Pilha inicial */
 
-#cardPile {
+#cardPile { /*Toda a div*/
   margin: 0 auto;
   background: rgb(67, 67, 67);
 }
 
-#cardSlots, #cardPile {
+#cardSlots, #cardPile { /*Toda a div*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
@@ -128,7 +128,7 @@ body {
 
 /* Individual cards e slots */
 
-#cardSlots div, #cardPile div {
+#cardSlots div, #cardPile div { /*card individual*/
   width: 150px;
   height: 150px;
   border: 2px solid #01087C;
@@ -137,7 +137,7 @@ body {
   background: rgba(3, 15, 252, 0.3);
 }
 
-#cardSlots div{
+#cardSlots div{ /*card individual*/
   margin-top: 30px;
   margin-left: 16px;
   color: rgb(0, 0, 0);
@@ -148,12 +148,12 @@ body {
   font-size: 0.9rem;
 }
 
-#cardPile div {
+#cardPile div { /*card individual*/
   margin-top: 30px;
   margin-left: 16px;
 }
 
-#cardPile div.ui-draggable-dragging {
+#cardPile div.ui-draggable-dragging { /* configuraçãoes do card individual no momnento em que está sendo arrastado*/
   -moz-box-shadow: 0 0 .5em rgba(3, 15, 252, 0.8);
   -webkit-box-shadow: 0 0 .5em rgba(3, 15, 252, 0.8);
   box-shadow: 0 0 .5em rgba(3, 15, 252, 0.8);
@@ -166,7 +166,6 @@ body {
 
 /* Mensagem */
 #mensagemSucesso {
-
   position: absolute;
   margin: 0 auto;
   left: 425px;
@@ -180,8 +179,7 @@ body {
   border-radius: 2%;
   box-shadow: 0px 2px 5px #0311FC;
  
-  white-space: nowrap;
-  
+  white-space: nowrap; 
 }
 
 #mensagemSucesso h2{
