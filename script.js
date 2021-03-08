@@ -1,13 +1,12 @@
-let correctCards = 0;
+let questoesCorretas = 0;
 $(init);
 
 
-// Incia
+// Inicia
 function init() {
-
   // Esconde a mensagem de sucesso
-  $('#successMessage').hide();
-  $('#successMessage').css({
+  $('#mensagemSucesso').hide();
+  $('#mensagemSucesso').css({
     left: '580px',
     top: '250px',
     width: 0,
@@ -16,15 +15,15 @@ function init() {
 
 
   // Inicia o game
-  correctCards = 0;
+  questoesCorretas = 0;
   $('#cardPile').html('');
   $('#cardSlots').html('');
 
   // Cria a primeira pilha de cartas
-  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  numbers.sort(function () { return Math.random() - .5 });
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  numbers.sort(() => { return Math.random() - .5 });
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 9; i++) {
     $('<div>' + numbers[i] + '</div>')
       .data('number', numbers[i])
       .attr('id', 'card' + numbers[i])
@@ -38,49 +37,51 @@ function init() {
   }
 
   // Cria os slots para as cartas
-  let words = ['Quem eh o bruxao??', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
-  for (let i = 1; i <= 10; i++) {
-    $('<div>' + words[i - 1] + '</div>')
+  let questoes = ['Quem eh o bruxao??', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+
+  for (let i = 1; i <= 9; i++) {
+    $('<div>' + questoes[i - 1] + '</div>')
       .data('number', i)
       .appendTo('#cardSlots')
       .droppable({
         accept: '#cardPile div',
         hoverClass: 'hovered',
-        drop: handleCardDrop
+        drop: lidaComODropDoCard
       });
   }
 
 }
 
-function handleCardDrop(event, ui) {
+function lidaComODropDoCard(event, ui) {
 
-  //Grab the slot number and card number
-  let slotNumber = $(this).data('number');
-  let cardNumber = ui.draggable.data('number');
+  //pega o slot e o numero da questão
+  let numeroDoSlot = $(this).data('number');
+  let numeroDaQuestão = ui.draggable.data('number');
 
-  //If the cards was dropped to the correct slot,
-  //change the card colour, position it directly
+  //Se os cards forem dropados no slot correto
+  //Mude alguma cor ou algo do tipo
   //on top of the slot and prevent it being dragged again
-  if (slotNumber === cardNumber) {
+
+  if (numeroDoSlot === numeroDaQuestão) {
     ui.draggable.addClass('correct');
     ui.draggable.draggable('disable');
     $(this).droppable('disable');
     ui.draggable.position({
       of: $(this), my: 'left top', at: 'left top'
     });
-    //This prevents the card from being
-    //pulled back to its initial position
-    //once it has been dropped
+
+    //Previne que o card saia para fora
+    //coloca o card na posição inicial
+
     ui.draggable.draggable('option', 'revert', false);
-    correctCards++; //increment keep track correct cards
+    questoesCorretas++; //incrementa uma questão correta
   }
 
-  //If all the cards have been placed correctly then
-  //display a message and reset the cards for
-  //another go
-  if (correctCards === 10) {
-    $('#successMessage').show();
-    $('#successMessage').animate({
+  // Se todas questoes estiverem corretas exibir a mensagem de sucesso
+  if (questoesCorretas === 9) {
+    $('#mensagemSucesso').show();
+
+    $('#mensagemSucesso').animate({
       left: '380px',
       top: '200px',
       width: '400px',

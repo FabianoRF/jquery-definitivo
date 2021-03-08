@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Trabalho jquery</title>
-      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
-      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-      <link rel="stylesheet" href="styles.css">
-      <script src="script.js"></script>
-   
-   <body>
-    <div id="content">
+
+<head>
+   <title>Trabalho jquery</title>
+   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+   <link rel="stylesheet" href="styles.css">
+   <script src="script.js"></script>
+
+<body>
+   <div id="title">
+      <h1>Quiz da Computação</h1>
+   </div>
+   <div id="content">
       <div id="cardPile"></div>
       <div id="cardSlots"></div>
-      
-      <div id="successMessage">
-        <h2>Parabéns você conseguiu!</h2>
-        <button onclick="init()">Jogar novamente!</button>
+
+      <div id="mensagemSucesso">
+         <h2>Parabéns você conseguiu!</h2>
+         <button onclick="init()">Jogar novamente!</button>
       </div>
-    </div>
-   </body>
+   </div>
+</body>
+
 </html>
